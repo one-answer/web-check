@@ -1,17 +1,17 @@
 import styled from '@emotion/styled';
-import { type ChangeEvent, type FormEvent, useState, useEffect } from 'react';
-import { Link, useNavigate, useLocation, type NavigateOptions } from 'react-router-dom';
+import { useState, type ChangeEvent, type FormEvent } from 'react';
+import { Link, useLocation, useNavigate, type NavigateOptions } from 'react-router-dom';
 
-import Heading from 'web-check-live/components/Form/Heading';
-import Input from 'web-check-live/components/Form/Input'
 import Button from 'web-check-live/components/Form/Button';
 import { StyledCard } from 'web-check-live/components/Form/Card';
-import Footer from 'web-check-live/components/misc/Footer';
+import Heading from 'web-check-live/components/Form/Heading';
+import Input from 'web-check-live/components/Form/Input';
 import FancyBackground from 'web-check-live/components/misc/FancyBackground';
+import Footer from 'web-check-live/components/misc/Footer';
 
-import docs from 'web-check-live/utils/docs';
 import colors from 'web-check-live/styles/colors';
 import { determineAddressType } from 'web-check-live/utils/address-type-checker';
+import docs from 'web-check-live/utils/docs';
 
 const HomeContainer = styled.section`
   display: flex;
@@ -239,7 +239,7 @@ const Home = (): JSX.Element => {
         { errorMsg && <ErrorMessage>{errorMsg}</ErrorMessage>}
         <Button type="submit" styles="width: calc(100% - 1rem);" size="large" onClick={submit}>Analyze!</Button>
       </UserInputMain>
-      <SponsorCard>
+      {/* <SponsorCard>
         <Heading as="h2" size="small" color={colors.primary}>Sponsored by</Heading>
         <div className="inner">
           <p>
@@ -272,7 +272,7 @@ const Home = (): JSX.Element => {
           </a>
         </div>
 
-      </SponsorCard>
+      </SponsorCard> */}
       <SiteFeaturesWrapper>
         <div className="features">
           <Heading as="h2" size="small" color={colors.primary}>Supported Checks</Heading>
@@ -281,7 +281,7 @@ const Home = (): JSX.Element => {
             <li><Link to="/about">+ more!</Link></li>
           </ul>
         </div>
-        <div className="links">
+        {/* <div className="links">
           <a target="_blank" rel="noreferrer" href="https://github.com/lissy93/web-check" title="Check out the source code and documentation on GitHub, and get support or contribute">
             <Button>View on GitHub</Button>
           </a>
@@ -291,7 +291,7 @@ const Home = (): JSX.Element => {
           <Link to="/about#api-documentation" title="View the API documentation, to use Web-Check programmatically">
             <Button>API Docs</Button>
           </Link>
-        </div>
+        </div> */}
       </SiteFeaturesWrapper>
       <Footer isFixed={true} />
     </HomeContainer>
