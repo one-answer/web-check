@@ -148,13 +148,13 @@ const Home = (): JSX.Element => {
   const location = useLocation();
 
   /* Redirect strait to results, if somehow we land on /check?url=[] */
-  useEffect(() => {
-    const query = new URLSearchParams(location.search);
-    const urlFromQuery = query.get('url');
-    if (urlFromQuery) {
-      navigate(`/check/${encodeURIComponent(urlFromQuery)}`, { replace: true });
-    }
-  }, [navigate, location.search]);
+  // useEffect(() => {
+  //   const query = new URLSearchParams(location.search);
+  //   const urlFromQuery = query.get('url');
+  //   if (urlFromQuery) {
+  //     navigate(`/check/${encodeURIComponent(urlFromQuery)}`, { replace: true });
+  //   }
+  // }, [navigate, location.search]);
 
   /* Check is valid address, either show err or redirect to results page */
   const submit = () => {
