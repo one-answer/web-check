@@ -220,7 +220,7 @@ const Home = (): JSX.Element => {
         <a href="/">
           <Heading as="h1" size="xLarge" align="center" color={colors.primary}>
             <img width="64" src="/web-check.png" alt="Web Check Icon" />
-            Web Check
+            网虫侦探
           </Heading>
         </a>
         <Input
